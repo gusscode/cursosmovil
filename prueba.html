@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>CursosMovil</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet" />
+
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css" />
+    <link rel="icon" href="cursosmovil-icon.ico" />
+
+    <meta property="og:title" content="cursosmovil.com" />
+    <meta property="og:type" content="app" />
+    <meta property="og:url" content="https://www.cursosmovil.com" />
+    <meta property="og:image:url" content="cursosmovil-logo.png" />
+    <meta property="og:description" content="App para crear cursos online y administrar alumnos, también enviar trabajos y poder visualizarlos en la computadora, poner comentarios, observaciones, realizar preguntas y mucho más...
+    " />
+
+
+    <style></style>
+</head>
+
+<body>
+    <!-- Start your project here-->
+
+    <!-- Start your project here-->
+    <div id="app">
+        <!--Navbar -->
+        <nav class="mb-1 navbar navbar-dark  teal darken-1 sticky-top"
+            style="height: 45px !important; padding-left: 10px !important; padding-top: 0px;">
+            <a class="navbar-brand p-0 m-0" href="https://cursos-guss.herokuapp.com/signin">
+                cursosmovil.com
+            </a>
+            <div>
+                <p class="navbar-brand d-none" id="materiaMenu">
+                    Materia
+                </p>
+            </div>
+
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent-333" aria-controls="navbarSupportedContent-333"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <button class="navbar-toggler" data-toggle="modal" data-target="#menuUsuario">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+                <ul class="navbar-nav " style="margin-left: 225px;">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/buscar">Buscar <i class="fas fa-search"></i>
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto nav-flex-icons justify-content-end">
+
+
+
+
+                </ul>
+            </div>
+        </nav>
+
+        <!--/.Navbar -->
+        <div class="brown lighten-5" width="100%">
+            <div class="row justify-content-center">
+                <div class="col-4 green m-5 p-4">
+                    One of two columns
+                </div>
+                <div class="col-4 green m-5 p-4">
+                    One of two columns
+                </div>
+            </div>
+            <div class="row justify-content-center" style="width: 900px !important;">
+                <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th class="th-sm">Nombre
+                            </th>
+                           
+    
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td>
+                            <div class="row pt-3" style="background-color: rgba(16, 16, 24, 0.5); border-radius: 7px">
+                                <div class="col col-2 align-middle">
+                                                                        <div style="width: 50px; height: 50px; overflow: hidden; border-radius: 50%; border: 2px solid rgb(232, 236, 233);">
+                                                                                <img src="${res.data[i].foto_alumno}" style="width: 100%; height: 100%; object-fit: cover; object-position: center">
+                                                                        </div>   
+                                </div>
+                                    <a id="boton${res.data[i].id_alumno}" class="col-5 ml-3 col-md-4 p-3  m-1 white-text text-left" style="font-size: 16px" 
+                                    data-toggle="collapse" href="#numero11" aria-expanded="false" aria-controls="collapseExample"
+                                    
+                                    >${res.data[i].nombre_alumno}</a>
+                                    
+                                      
+                                    <p 
+                                    style="cursor: pointer; font-size: 16px; border-radius: 10px 10px 0px 0px; "
+                                    class="${estado} col-md-2 col-3" 
+                                    
+                                   > ${estadohtml}</p>
+                                   <div class="collapse grey lighten-5 col-12" id="numero11" >
+                                        <div class="row" id="contAlumno${res.data[i].id_alumno}">
+                                        <p>dfgdfgdfgdgfdgfdfgdgf</p>
+                                        </div>
+                                    </div>
+                                                         
+                                </div>
+                        </td>
+    
+                        </tr>
+    
+    
+    
+    
+    
+                        <tr>
+                            <td>Donna Snider</td>
+                            
+    
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Name
+                            </th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+           
+
+        </div>
+
+    </div>
+
+
+    <div class="row pt-3" style="background-color: rgba(16, 16, 24, 0.5); border-radius: 7px">
+        <div class="col col-2 align-middle">
+            <div
+                style="width: 50px; height: 50px; overflow: hidden; border-radius: 50%; border: 2px solid rgb(232, 236, 233);">
+                <img src="${res.data[i].foto_alumno}"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center">
+            </div>
+        </div>
+        <a id="boton${res.data[i].id_alumno}" class="col-5 ml-3 col-md-4 p-3  m-1 white-text text-left"
+            style="font-size: 16px" data-toggle="collapse" href="#numero${res.data[i]._id}" aria-expanded="false"
+            aria-controls="collapseExample"
+            onclick="getTrabajos('${res.data[i].id_alumno}', '${res.data[i].id_materia}')">${res.data[i].nombre_alumno}</a>
+
+
+        <p style="cursor: pointer; font-size: 16px; border-radius: 10px 10px 0px 0px" class="${estado} col-md-2 col-3"
+            onclick="cambiarEstadoMateria('${res.data[i]._id}','${res.data[i].materia}')"> ${estadohtml}</p>
+        <div class="collapse grey lighten-5 col-12" id="numero${res.data[i]._id}">
+            <div class="row" id="contAlumno${res.data[i].id_alumno}">
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- <div class="row pt-3" style="background-color: rgba(16, 16, 24, 0.5); border-radius: 7px">
+        <div class="col col-2 align-middle">
+            <div
+                style="width: 50px; height: 50px; overflow: hidden; border-radius: 50%; border: 2px solid rgb(232, 236, 233);">
+                <img src="${res.data[i].foto_alumno}"
+                    style="width: 100%; height: 100%; object-fit: cover; object-position: center">
+            </div>
+        </div>
+        <a id="boton${res.data[i].id_alumno}" class="col-5 ml-3 col-md-4 p-3  m-1 white-text text-left"
+            style="font-size: 16px" data-toggle="collapse" href="#numero${res.data[i]._id}" aria-expanded="false"
+            aria-controls="collapseExample"
+            onclick="getTrabajos('${res.data[i].id_alumno}', '${res.data[i].id_materia}')">${res.data[i].nombre_alumno}</a>
+
+
+        <p style="cursor: pointer; font-size: 16px; border-radius: 10px 10px 0px 0px" class="${estado} col-md-2 col-3"
+            onclick="cambiarEstadoMateria('${res.data[i]._id}','${res.data[i].materia}')"> ${estadohtml}</p>
+        <div class="collapse grey lighten-5 col-12" id="numero${res.data[i]._id}">
+            <div class="row" id="contAlumno${res.data[i].id_alumno}">
+
+            </div>
+        </div>
+
+    </div> -->
+
+
+
+
+
+    <!-- ____________________________________________________________________________________ -->
+
+    <!-- SCRIPTS -->
+    <!-- Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+
+
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
+
+
+    <!-- <script src="build/gusslib.min.js"></script> -->
+
+
+    <!-- <script src="libjs/pdf.min.js"></script> -->
+
+    <script>
+        $(document).ready(function () {
+            $('#dtBasicExample').DataTable();
+            $('.dataTables_length').addClass('bs-select');
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>
