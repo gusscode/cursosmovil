@@ -115,6 +115,32 @@
 
 </head>
 <body>
+
+	<button
+	style="position: fixed;"
+	onclick="pantallaCompleta()">click</button>
+	<script>
+		function pantallaCompleta() {
+			var elem = document.getElementById("body");
+			
+			if (document.fullscreenElement) {
+				document.exitFullscreen()
+			} else {
+				document.documentElement.requestFullscreen()
+			}
+
+			/* if (elem.requestFullscreen) {
+				elem.requestFullscreen();
+			} */
+			/* if (elem.fullscreenElement != null){
+				exitFullscreen()
+			} */
+			console.log(elem)
+			/* if (elem.fullscreenEnabled ) {
+				alert("esta en pantalla completa")
+			} */
+		}
+	</script>
 	<canvas id='canvas'>
 		HTML5 canvas appears to be unsupported in the current browser.<br />
 		Please try updating or use a different browser.
