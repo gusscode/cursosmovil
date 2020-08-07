@@ -14,10 +14,10 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.731ab586e00bc067f62e522e907220ad.js"
+  "/precache-manifest.5671ba00f55a5c32f23fa8220d3cd182.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "primer"});
+workbox.core.setCacheNameDetails({prefix: "cursosmovil"});
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
