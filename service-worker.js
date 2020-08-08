@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.5671ba00f55a5c32f23fa8220d3cd182.js"
+  "/precache-manifest.0cabe623d542c68476a58648b155d063.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "cursosmovil"});
